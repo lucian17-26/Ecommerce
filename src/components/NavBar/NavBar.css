@@ -1,0 +1,64 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.nav-main{
+    background-color: blue;
+    padding: 15px;
+}
+li, a{
+    list-style: none;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: large ;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    font-family: serif;
+}
+.logo{
+    height: 100%;
+}
+img{
+    width: 40px;
+    height: 35px;
+}
+
+.Item-Lista{
+    margin: 20px;
+    height: 100%;
+    background-color: gray;
+}
+.Item-Lista h1{
+    margin: 15px;
+    text-align: center;
+}
+
+.agregar-carrito{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    
+}
+
+.button{
+    /* padding: 5px; */
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+    border-style: none;
+    font-size: larger;
+}
+
+.boton-agregar{
+    padding: 3px;
+    margin-top: 5px;
+    background-color: aquamarine;
+    border-radius: 10px;
+    font-size: medium ;
+}

@@ -1,0 +1,21 @@
+.cards{
+    background-color: rgba(61, 120, 197, 0.822);
+    text-align: center;
+    width: 200px;
+    height: 350px;
+    border-radius: 15px;
+}
+.cards img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.cards h3, h4{
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+.ver-detalle{
+    font-size: small;
+    margin-bottom: 2px;
+}
