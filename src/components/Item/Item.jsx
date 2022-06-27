@@ -12,7 +12,7 @@ export const Item = ({item, stock}) => {
             <h3>{item.titulo}</h3>
             <h4>${item.precio}</h4>
             <Link to={urlDetalle} class="ver-detalle">Ver Detalle</Link>
-            <ItemCount stock={item.stock} initial={0} />
+            <ItemCount stock={item.stock} initial={1} />
         </div>
     )
 } 

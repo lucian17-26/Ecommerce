@@ -31,7 +31,9 @@ img{
 .Item-Lista{
     margin: 20px;
     height: 100%;
-    background-color: gray;
+    background-image: url(../../Img/fondo.jpg);
+    background-size: 100%;
+    /* object-fit: cover; */
 }
 .Item-Lista h1{
     margin: 15px;
