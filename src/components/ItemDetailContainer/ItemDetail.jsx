@@ -8,15 +8,16 @@ import { useContext } from 'react';
 
 function ItemDetail({item}) {
   const [añadirAlCarrito, setAñadirAlCarrito] = useState(false);
-  const [cant, setCant] = useState(0)
-  const { addToCart } = useContext(CartContext);
+  
+  const { addToCart, cart } = useContext(CartContext);
+  console.log(cart)
 
-function handleOnAdd(cantidad){
-    setCant(cantidad)
+function handleOnAdd(cant){
     setAñadirAlCarrito(true);
-    addToCart(item, cantidad);
+    addToCart(item, cant);
+    
   }
-
+  
   return (
     <div className='detalle-libro'>
         <img src={item.thumbnailUrl} alt="Logo" className='portada-libro'/>
@@ -25,8 +26,9 @@ function handleOnAdd(cantidad){
         <h2>{item.resumen}</h2>
         <h3 class="boton-agregar1">${item.precio}</h3>
         <div class="boton-agregar1">
+        
         {
-          añadirAlCarrito === false ? <ItemCount stock={item.stock} initial={1} onAdd={handleOnAdd}/> : <Link to="/Cart"><button className='boton-agregar'>Terminar mi compra</button></Link>
+          añadirAlCarrito === false ? <ItemCount stock={item.stock} initial={1} onAdd={handleOnAdd}/> : <Link to="/Cart"><button className='boton-agregar'>Ir al carrito</button></Link>
         }
         </div>
         </section>

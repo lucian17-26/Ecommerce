@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { useState } from 'react';
 import { createContext } from 'react';
 
@@ -10,32 +9,40 @@ export const CartProvider = ({ children }) => {
     //estados
     const [cart, setCart] = useState([]);
 
-    useEffect(() => {
-    }, [cart]);
-
-    const prueba = () => {
-        
-    };
-
-    const addToCart = (item, cantidad) => {
-        if (isInCart(item.id)) {
-            
-            
-        } else {
-            setCart([...cart, { ...item, cantidad }]);
-        }
-        
-    };
-
     
-    const isInCart = (id) => {
-        
+
+    const addToCart = (item, cant) => {
+            if(añadirAlCarrito(item.id)){
+                const idAgregar = item.id
+                let itemToAdd = cart.find( cadaItem => cadaItem.id === idAgregar)
+                itemToAdd.cant += cant;
+            }else {
+                setCart([...cart, { ...item, cant }]);
+            }
+            
+    };
+
+    const removerItem = (id) => {
+        let newCart = cart.filter(item => item.id !== id);
+        return setCart(newCart);
+    };
+
+    const añadirAlCarrito = (id) => {
         return cart.some((prod) => prod.id === id);
     };
 
+    const qntyInCart = () =>{
+        let total = 0;
+        cart.forEach((item) => (total = total + item.cant));
+        return total;
+    }
+
+    const clearCart = ()=>{
+        setCart([]);
+    }
 
     return (
-        <CartContext.Provider value={{ cart, prueba, addToCart }}>
+        <CartContext.Provider value={{ cart,  addToCart , añadirAlCarrito, qntyInCart, clearCart , removerItem}}>
             {children}
         </CartContext.Provider>
     );

@@ -2,17 +2,31 @@ import React from 'react'
 import "./Cart.css"
 import { CartContext } from '../../context/CartContext';
 import { useContext } from 'react';
+// import Item from '../Item/Item';
 
 
 function Cart() {
 
-  const { prueba } = useContext(CartContext);
+  const { cart, clearCart, removerItem } = useContext(CartContext);
 
+  if(cart.length === 0){
+    return <h1>Carrito vacio</h1>
+  }
   return (
     <div className='estilo'>
-        <h1 className='h1'>Hola soy un Cart</h1>
-        
-        <button onClick={prueba}>Click</button>
+      {
+        cart.map(item =>(
+          <>
+          <h1>{item.titulo}</h1>
+          <h2>${item.precio}</h2>
+          {/* <p>cantidad de unidades : {item.cantidad}</p> */}
+          <p>cantidad de unidades : {item.stock}</p>
+          <button>Terminar compra</button>
+          <button onClick={clearCart}>Cancelar compra</button>
+          <button onClick={() => removerItem(item.id)}>eliminar producto</button>
+          </>
+        ))
+      }
     </div>
   )
 }
