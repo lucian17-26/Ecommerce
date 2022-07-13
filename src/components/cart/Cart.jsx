@@ -19,7 +19,7 @@ function Cart() {
           <>
           <h1>{item.titulo}</h1>
           <h2>${item.precio}</h2>
-          {/* <p>cantidad de unidades : {item.cantidad}</p> */}
+          <p>cantidad de unidades : {item.cant}</p>
           <p>cantidad de unidades : {item.stock}</p>
           <button>Terminar compra</button>
           <button onClick={clearCart}>Cancelar compra</button>

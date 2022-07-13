@@ -12,14 +12,13 @@ export const CartProvider = ({ children }) => {
     
 
     const addToCart = (item, cant) => {
-            if(añadirAlCarrito(item.id)){
-                const idAgregar = item.id
-                let itemToAdd = cart.find( cadaItem => cadaItem.id === idAgregar)
-                itemToAdd.cant += cant;
+        if(añadirAlCarrito(item.id)){
+            const idAgregar = item.id
+            let itemToAdd = cart.find( cadaItem => cadaItem.id === idAgregar)
+            itemToAdd.cant += cant;
             }else {
-                setCart([...cart, { ...item, cant }]);
-            }
-            
+            setCart([...cart, { ...item, cant }]);
+        }
     };
 
     const removerItem = (id) => {
