@@ -1,0 +1,16 @@
+.style-button{
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    border: 3px solid black;
+    cursor: pointer;
+    font-size: small;
+    margin-bottom: 10px;
+    background-color: cadetblue;
+    font-style: italic solid;
+}
+
+.style-button:hover{
+    font-size: medium;
+}
+

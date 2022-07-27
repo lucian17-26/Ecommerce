@@ -2,7 +2,6 @@ import { useState } from "react";
 
 function ItemCount({stock,initial, onAdd}){
 
-    // let initial = 1;
     const [cantidad, setCantidad] = useState(initial);
     const [stockProducto, setStockProducto] = useState(stock);
     
@@ -18,19 +17,19 @@ function ItemCount({stock,initial, onAdd}){
 
     }
 
-    function actualizar(){
-    return cantidad
+    function addToCart(){
+    onAdd(cantidad);
     }
 
     return (  
         <div>
-            <div class="agregar-carrito">
-                <button class="button" onClick={resta}> - </button>
-                <span>{actualizar()}</span>
-                <button class="button" onClick={suma}> + </button>
+            <div className="agregar-carrito">
+                <button className="button" onClick={resta}> - </button>
+                <span>{cantidad}</span>
+                <button className="button" onClick={suma}> + </button>
             </div>
             <div>
-            <button class="boton-agregar" onClick={onAdd}>Agregar al carrito</button>
+            <button className="boton-agregar" onClick={addToCart}>Agregar al carrito</button>
             </div>
         </div>
         

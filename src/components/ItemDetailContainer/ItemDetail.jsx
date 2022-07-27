@@ -1,24 +1,17 @@
 import React from 'react'
 import "./detalle.css"
 import ItemCount from '../ItemCount/ItemCount';
-// import { useState } from "react";
 import { Link } from 'react-router-dom';
-import { CartContext } from '../../context/CartContext';
+import  cartContext  from '../../context/CartContext';
 import { useContext } from 'react';
 
 function ItemDetail({item}) {
-  // const [añadirAlCarrito, setAñadirAlCarrito] = useState(false);
   
-  const { addToCart, cart,añadirAlCarrito } = useContext(CartContext);
+  const { addToCart, cart, añadirAlCarrito } = useContext(cartContext);
   console.log(cart)
-
 function handleOnAdd(cant){
   addToCart(item, cant);
-  // setAñadirAlCarrito(true);
-    
   }
-  
-  
   return (
     <div className="detalle-libro">
         <img src={item.thumbnailUrl} alt="Logo" className='portada-libro'/>

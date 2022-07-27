@@ -1,11 +1,65 @@
 .estilo{
-    height: 500px;
-}
-
-.h1{
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.libro-cart{
+    width: 120px;
+    height: 120px;
+}
+tr{
+    text-align: center;
+    background-color: rgb(214, 202, 202);
+}
+th{
+    height: 65px;
+    background-color: rgb(6, 105, 14);
+    padding: 0 10px;
+}
+
+.color-rojo{
+    background-color: red;
+    width: 200px;
+    height: 30px;
+}
+
+.color-verde{
+    background-color: green;
+    width: 200px;
+    height: 30px;
+}
+
+.style-finalizar-compra{
+    width: 100%;
+    margin-top: 20px;
     
+}
+
+.style-finalizar-compra-hijo{
+    text-align: end;
+    margin-top: 10px;
+    width: 200px;
+    height: 30px;
+
+}
+
+.style-boton-eliminar{
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: rgba(238, 14, 14, 0.842);
+    border: 2px solid black;
+    cursor: pointer;
+}
+.carrito-vacio{
+    width: 100%;
+    text-align: center;
+    margin-top: 10%;
+}
+
+.color-texto{
+    color: black;
 }

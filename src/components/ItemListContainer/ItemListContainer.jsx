@@ -12,20 +12,6 @@ function ItemListContainer(props){
     
 
     useEffect(() =>{
-        // llamar a la API
-        // const traerLibros= new Promise ((res, rej) =>{
-        //     setTimeout(() =>{
-        //         if(categoryId === undefined){
-        //             res(libros)
-        //         }else{
-        //             const itemsFound = libros.filter( detalle =>{
-        //                 return detalle.category === categoryId;
-        //             })
-        //             res(itemsFound);
-        //         }
-        //     }, 800);
-        // })
-        
             if (categoryId) {
                 traerProductosDeCategoria(categoryId)
                 .then((res) => {

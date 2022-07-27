@@ -4,7 +4,7 @@ import LogoNav from "../../Img/logo.png"
 function Logo(){ 
     return(
         <>
-        <img class="logo" alt="logo" src={LogoNav} />
+        <img className="logo" alt="logo" src={LogoNav} />
         </>
     )
 }

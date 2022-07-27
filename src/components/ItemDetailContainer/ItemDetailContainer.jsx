@@ -10,12 +10,14 @@ export default function ItemDetailContainer() {
     // const { itemId } = useParams();
     const{ itemId } = useParams();
     const [products, setProducts] = useState([])
+    const [estaCargando, setEstaCargando] = useState(true)
 
     useEffect(() =>{
         // llamar a la API
         traerUnProducto(itemId)
             .then((res) => {
                 setProducts(res);
+                setEstaCargando(false);
             })
             .catch((error) => {
             console.log(error);
@@ -30,7 +32,10 @@ export default function ItemDetailContainer() {
             <Link to="/category/aventura"><button>Aventura</button></Link>
             <Link to="/category/veridica"><button>Veridicas</button></Link> */}
             <div>
+                { estaCargando 
+                ? <h3>Cargando...</h3>: 
                 <ItemDetail item={products}/>
+                }
             </div>
         </div>
         )

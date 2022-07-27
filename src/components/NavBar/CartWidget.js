@@ -1,14 +1,20 @@
 import CartWidgetCarrito from "../../Img/carrito.png"
-import { CartContext } from "../../context/CartContext";
+import  cartContext  from "../../context/CartContext";
 import React, { useContext } from "react";
+import "./NavBar.css"
+import { Link } from "react-router-dom";
 
 function CartWidget(){ 
-    const {qntyInCart} = useContext(CartContext);
+    const { qntyInCart } = useContext(cartContext);
+
     return(
-        <>
-        <img alt="logo" src={CartWidgetCarrito} />
-        <span>{qntyInCart()}</span>
-        </>
+        <div>
+        <Link to="/Cart"><img alt="logo" src={CartWidgetCarrito} /></Link>
+        
+        <span className="carrito-cantidad">
+            {qntyInCart()=== 0 ? "" : qntyInCart()}
+            </span>
+        </div>
     )
 }
 

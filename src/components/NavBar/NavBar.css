@@ -6,6 +6,8 @@
 .nav-main{
     background-color: blue;
     padding: 15px;
+    position: sticky;
+    top: 0;
 }
 li, a{
     list-style: none;
@@ -29,14 +31,14 @@ img{
 }
 
 .Item-Lista{
-    margin: 20px;
+    /* margin: 20px; */
     height: 100%;
     background-image: url(../../Img/fondo.jpg);
     background-size: 100%;
     /* object-fit: cover; */
 }
 .Item-Lista h1{
-    margin: 15px;
+    /* margin: 15px; */
     text-align: center;
 }
 
@@ -64,3 +66,9 @@ img{
     border-radius: 10px;
     font-size: medium ;
 }
+
+.carrito-cantidad{
+    color: beige;
+    font-size: large;
+}
+
