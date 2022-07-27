@@ -65,8 +65,10 @@ function Cart() {
           <div className='style-finalizar-compra'>
             <h2 className='style-finalizar-compra-hijo'>Subtotal ${precioTotal()}</h2>
             <div className=' style-finalizar-compra-hijo' onClick={clearCart} >
-            < Button   button="Cancelar Compra"/>
-            < Button  button="Finalizar Compra" />
+              < Button   button="Cancelar Compra"/>
+            </div>
+            <div className=' style-finalizar-compra-hijo' >
+              < Button  button="Finalizar Compra" />
             </div>
           </div>
           
